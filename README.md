@@ -44,7 +44,7 @@ pod "NXFramework" ,:git => 'https://github.com/jsonwang/NXFramework.git'
 ```
 ## Author
 
-wangcheng, 287971051@qq.com.com
+LM， WWW， 袁涛， AK
 
 ## License
 
