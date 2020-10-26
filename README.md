@@ -6,8 +6,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/NXFramework.svg?style=flat)](http://cocoapods.org/pods/NXFramework)
 
 # TODO List
-- [ ] 不勾选
-- [X] 勾选
+- [ ] Swift 代码格式化插件
+ 
 
 # 目录说明
 
