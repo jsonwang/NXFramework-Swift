@@ -15,8 +15,6 @@
 		4108215E2546D0D2007E93FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4108215D2546D0D2007E93FA /* Assets.xcassets */; };
 		410821612546D0D2007E93FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4108215F2546D0D2007E93FA /* LaunchScreen.storyboard */; };
 		4108218B2546D20F007E93FA /* NXConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108218A2546D20F007E93FA /* NXConfig.swift */; };
-		4108218D2546E7EF007E93FA /* NXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108218C2546E7EF007E93FA /* NXFileManager.swift */; };
-		4108218F2546ED05007E93FA /* NXDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108218E2546ED05007E93FA /* NXDeviceManager.swift */; };
 		410821912546EE1B007E93FA /* NXLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410821902546EE1B007E93FA /* NXLogger.swift */; };
 		410821962546F1EA007E93FA /* NXFundation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410821952546F1EA007E93FA /* NXFundation+Ext.swift */; };
 		410821982546F988007E93FA /* NXLoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410821972546F988007E93FA /* NXLoggerManager.swift */; };
@@ -36,8 +34,6 @@
 		410821602546D0D2007E93FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		410821622546D0D2007E93FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4108218A2546D20F007E93FA /* NXConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXConfig.swift; sourceTree = "<group>"; };
-		4108218C2546E7EF007E93FA /* NXFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NXFileManager.swift; path = ../NXMacro/NXFileManager.swift; sourceTree = "<group>"; };
-		4108218E2546ED05007E93FA /* NXDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NXDeviceManager.swift; path = ../NXMacro/NXDeviceManager.swift; sourceTree = "<group>"; };
 		410821902546EE1B007E93FA /* NXLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXLogger.swift; sourceTree = "<group>"; };
 		410821952546F1EA007E93FA /* NXFundation+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NXFundation+Ext.swift"; sourceTree = "<group>"; };
 		410821972546F988007E93FA /* NXLoggerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NXLoggerManager.swift; sourceTree = "<group>"; };
@@ -176,8 +172,6 @@
 		410821752546D193007E93FA /* NXUtlity */ = {
 			isa = PBXGroup;
 			children = (
-				4108218C2546E7EF007E93FA /* NXFileManager.swift */,
-				4108218E2546ED05007E93FA /* NXDeviceManager.swift */,
 			);
 			path = NXUtlity;
 			sourceTree = "<group>";
@@ -302,8 +296,6 @@
 				4108218B2546D20F007E93FA /* NXConfig.swift in Sources */,
 				410821962546F1EA007E93FA /* NXFundation+Ext.swift in Sources */,
 				4108219C2546FB6B007E93FA /* NXUIColor+Ext.swift in Sources */,
-				4108218D2546E7EF007E93FA /* NXFileManager.swift in Sources */,
-				4108218F2546ED05007E93FA /* NXDeviceManager.swift in Sources */,
 				410821912546EE1B007E93FA /* NXLogger.swift in Sources */,
 				410821982546F988007E93FA /* NXLoggerManager.swift in Sources */,
 				410821552546D0D1007E93FA /* AppDelegate.swift in Sources */,

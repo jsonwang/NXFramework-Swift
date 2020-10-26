@@ -11,10 +11,10 @@ import UIKit
 
 public enum NXLoggerLevel: Int {
     case info = 1
-    case debug
-    case warning
-    case error
-    case none
+    case debug = 2
+    case warning = 3
+    case error = 4
+    case none = 5
     
     var name: String {
         switch self {
@@ -69,13 +69,9 @@ public class NXLogger: NSObject {
     
     private override init() {
         super.init()
-        //UIApplicationWillResignActive
+     
         NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name:  UIApplication.willResignActiveNotification, object: nil)
-        /*
-        NSSetUncaughtExceptionHandler { (exception) in
-            Logger.shared.save()
-        }
-         */
+   
     }
     
     // MARK: - Methods
