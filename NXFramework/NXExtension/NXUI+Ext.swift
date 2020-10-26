@@ -266,13 +266,28 @@ public extension UIView {
         self.addSubview(imageView)
         return imageView
     }
+    
+    /// 添加文本控件
+    /// - Parameters:
+    ///   - fontSize: 文本大小
+    ///   - text: 文本
+    ///   - textColor: 文本颜色
+    ///   - bgColor: 背景颜色
+    /// - Returns: 文本控件
     func nx_addLabel(fontSize: CGFloat, text: String, textColor: UIColor, bgColor: UIColor) -> UILabel {
         return nx_addLabel(font: UIFont.systemFont(ofSize: fontSize),
                         text: text,
                         textColor: textColor,
                         bgColor: bgColor)
     }
-
+    
+    /// 添加文本控件
+    /// - Parameters:
+    ///   - font: 文本大小
+    ///   - text: 文本
+    ///   - textColor: 文本颜色
+    ///   - bgColor: 背景颜色
+    /// - Returns: 文本控件
     func nx_addLabel(font: UIFont, text: String, textColor: UIColor, bgColor: UIColor) -> UILabel {
         let label = UILabel(frame: .zero)
         label.font = font
@@ -283,6 +298,18 @@ public extension UIView {
         return label
     }
     
+    /// 添加按钮控件
+    /// - Parameters:
+    ///   - rect: 控件大小
+    ///   - title: 标题
+    ///   - titleColor: 标题颜色
+    ///   - font: 字体
+    ///   - image: 图片
+    ///   - bgImg: 背景图片
+    ///   - target: 事件响应者
+    ///   - action: 事件响应方法
+    ///   - event: 响应事件
+    /// - Returns: 按钮
     func nx_addButton(rect: CGRect, title: String, titleColor: UIColor, font: UIFont, image: UIImage?, bgImg: UIImage?, target: Any?, action: Selector?, event: UIControl.Event?) -> UIButton {
             let btn = UIButton(type: .custom)
             btn.frame = rect
@@ -301,7 +328,16 @@ public extension UIView {
             addSubview(btn)
             return btn
         }
-
+    
+    /// 添加一个文本类型的按钮控件
+    /// - Parameters:
+    ///   - rect: 按钮大小
+    ///   - title: 文本
+    ///   - titleColor: 文本颜色
+    ///   - target: 事件响应者
+    ///   - action: 事件响应方法
+    ///   - event:响应事件
+    /// - Returns: 按钮控件
         func nx_addButton(rect: CGRect, title: String, titleColor: UIColor, target: Any?, action: Selector?, event: UIControl.Event?) -> UIButton {
             return nx_addButton(rect: rect,
                              title: title,
@@ -313,7 +349,15 @@ public extension UIView {
                              action: action,
                              event: event)
         }
-
+    
+    /// 添加图片类型按钮
+    /// - Parameters:
+    ///   - rect: 按钮大小
+    ///   - image: 图片
+    ///   - target: 事件响应者
+    ///   - action: 事件响应方法
+    ///   - event: 响应事件
+    /// - Returns: 按钮控件
         func nx_addButton(rect: CGRect, image: UIImage, target: Any?, action: Selector?, event: UIControl.Event?) -> UIButton {
             return nx_addButton(rect: rect,
                              title: "",
@@ -325,6 +369,13 @@ public extension UIView {
                              action: action,
                              event: event)
         }
+    
+    /// 添加tableView
+    /// - Parameters:
+    ///   - rect: 大小
+    ///   - delegate: delegate对象
+    ///   - dataSource: dataSource 对象
+    /// - Returns: 表视图
     func nx_addTableView(rect: CGRect, delegate: UITableViewDelegate?,dataSource:UITableViewDataSource?) -> UITableView {
           let tableView = UITableView(frame: rect)
           tableView.delegate = delegate
