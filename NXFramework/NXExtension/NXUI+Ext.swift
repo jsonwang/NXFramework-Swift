@@ -33,7 +33,7 @@ public enum ShakeDirection: Int {
 }
 
 public extension UIView {
-    public func shake(direction: ShakeDirection = .horizontal, times: Int = 5,
+    func shake(direction: ShakeDirection = .horizontal, times: Int = 5,
                       interval: TimeInterval = 0.1, delta: CGFloat = 2,
                       completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: interval, animations: { () -> Void in
@@ -237,6 +237,34 @@ extension UIView {
         self.backgroundColor = .clear
         self.addSubview(effectView)
         self.sendSubviewToBack(effectView)
+    }
+}
+extension UIView {
+    
+    /// 往当前视图添加一个子视图
+    /// - Parameters:
+    ///   - rect: 子视图大小
+    ///   - bgColor: 子视图背景色
+    /// - Returns: 子视图
+    public func nx_addView(rect:CGRect = .zero,bgColor:UIColor = .white) ->UIView{
+        let view = UIView(frame: rect)
+        view.backgroundColor = bgColor
+        self.addSubview(view)
+        return view
+    }
+    
+    /// 往当前视图添加UIImageView
+    /// - Parameters:
+    ///   - image: 图片对象
+    ///   - rect: UIImageView
+    ///   - contentMode: 图片填充模式
+    /// - Returns: 图片
+    public func nx_addImageView(image:UIImage?,rect:CGRect = .zero, contentMode:ContentMode = .scaleAspectFit)->UIImageView{
+        let imageView = UIImageView(frame: rect);
+        imageView.image = image
+        imageView.contentMode = contentMode
+        self.addSubview(imageView)
+        return imageView
     }
 }
  
