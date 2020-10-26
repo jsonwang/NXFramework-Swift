@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let logger = NXLogger.shared
+        #if DEBUG
+            logger.level = .info
+            logger.ouput = .debugerConsoleAndFile
+            #endif
+            logger.d("App Started....")
     }
 
 
