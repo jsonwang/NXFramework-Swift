@@ -239,14 +239,14 @@ extension UIView {
         self.sendSubviewToBack(effectView)
     }
 }
-extension UIView {
+public extension UIView {
     
     /// 往当前视图添加一个子视图
     /// - Parameters:
     ///   - rect: 子视图大小
     ///   - bgColor: 子视图背景色
     /// - Returns: 子视图
-    public func nx_addView(rect:CGRect = .zero,bgColor:UIColor = .white) ->UIView{
+    func nx_addView(rect:CGRect = .zero,bgColor:UIColor = .white) ->UIView{
         let view = UIView(frame: rect)
         view.backgroundColor = bgColor
         self.addSubview(view)
@@ -259,12 +259,83 @@ extension UIView {
     ///   - rect: UIImageView
     ///   - contentMode: 图片填充模式
     /// - Returns: 图片
-    public func nx_addImageView(image:UIImage?,rect:CGRect = .zero, contentMode:ContentMode = .scaleAspectFit)->UIImageView{
+     func nx_addImageView(image:UIImage?,rect:CGRect = .zero, contentMode:ContentMode = .scaleAspectFit)->UIImageView{
         let imageView = UIImageView(frame: rect);
         imageView.image = image
         imageView.contentMode = contentMode
         self.addSubview(imageView)
         return imageView
     }
+    func nx_addLabel(fontSize: CGFloat, text: String, textColor: UIColor, bgColor: UIColor) -> UILabel {
+        return nx_addLabel(font: UIFont.systemFont(ofSize: fontSize),
+                        text: text,
+                        textColor: textColor,
+                        bgColor: bgColor)
+    }
+
+    func nx_addLabel(font: UIFont, text: String, textColor: UIColor, bgColor: UIColor) -> UILabel {
+        let label = UILabel(frame: .zero)
+        label.font = font
+        label.text = text
+        label.textColor = textColor
+        label.backgroundColor = bgColor
+        self.addSubview(label)
+        return label
+    }
+    
+    func nx_addButton(rect: CGRect, title: String, titleColor: UIColor, font: UIFont, image: UIImage?, bgImg: UIImage?, target: Any?, action: Selector?, event: UIControl.Event?) -> UIButton {
+            let btn = UIButton(type: .custom)
+            btn.frame = rect
+            btn.setTitle(title, for: .normal)
+            btn.setTitle(title, for: .highlighted)
+            btn.setTitleColor(titleColor, for: .normal)
+            btn.setTitleColor(titleColor, for: .highlighted)
+            btn.setImage(image, for: .normal)
+            btn.setImage(image, for: .highlighted)
+            btn.setBackgroundImage(bgImg, for: .normal)
+            btn.setBackgroundImage(bgImg, for: .highlighted)
+            btn.titleLabel?.font = font
+            if let sel = action, let e = event {
+                btn.addTarget(target, action: sel, for: e)
+            }
+            addSubview(btn)
+            return btn
+        }
+
+        func nx_addButton(rect: CGRect, title: String, titleColor: UIColor, target: Any?, action: Selector?, event: UIControl.Event?) -> UIButton {
+            return nx_addButton(rect: rect,
+                             title: title,
+                             titleColor: titleColor,
+                             font: UIFont.systemFont(ofSize: 14),
+                             image: nil,
+                             bgImg: nil,
+                             target: target,
+                             action: action,
+                             event: event)
+        }
+
+        func nx_addButton(rect: CGRect, image: UIImage, target: Any?, action: Selector?, event: UIControl.Event?) -> UIButton {
+            return nx_addButton(rect: rect,
+                             title: "",
+                             titleColor: .white,
+                             font: UIFont.systemFont(ofSize: 14),
+                             image: image,
+                             bgImg: nil,
+                             target: target,
+                             action: action,
+                             event: event)
+        }
+    func nx_addTableView(rect: CGRect, delegate: UITableViewDelegate?,dataSource:UITableViewDataSource?) -> UITableView {
+          let tableView = UITableView(frame: rect)
+          tableView.delegate = delegate
+          tableView.dataSource = dataSource
+          backgroundColor = .white
+          tableView.tableFooterView = UIView()
+          if #available(iOS 11.0, *) {
+              tableView.contentInsetAdjustmentBehavior = .never
+          }
+          return tableView
+      }
+
 }
  
