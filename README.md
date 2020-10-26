@@ -40,9 +40,9 @@ NXFramework is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'NXFramework'
+pod 'NXFramework-Swift'
 or
-pod "NXFramework" ,:git => 'https://github.com/jsonwang/NXFramework.git'
+pod "NXFramework-Swift" ,:git => 'https://github.com/jsonwang/NXFramework-Swift.git'
 ```
 ## Author
 
