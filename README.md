@@ -7,6 +7,7 @@
 
 # 目录说明
 
+```
 ├── Assets 资源目录
 │   ├── en.lproj
 │   └── zh-Hans.lproj
@@ -25,6 +26,7 @@
 │   ├── NXConfig.swift
 ├── NXNetworkManger   网络管理
 └── NXUtility 工具类目录
+```
 
 ## Example
 
