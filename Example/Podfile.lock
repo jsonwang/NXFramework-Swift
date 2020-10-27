@@ -1,0 +1,16 @@
+PODS:
+  - NXFramework-Swift (0.1.0)
+
+DEPENDENCIES:
+  - NXFramework-Swift (from `../`)
+
+EXTERNAL SOURCES:
+  NXFramework-Swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NXFramework-Swift: a86291255f47d469da796602cc79cf8b2d418346
+
+PODFILE CHECKSUM: 6d96891643b7ec822b3bac8b251b9354e0c362e9
+
+COCOAPODS: 1.8.3

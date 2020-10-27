@@ -1,0 +1,6 @@
+framework module NXFramework_Swift {
+  umbrella header "NXFramework-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

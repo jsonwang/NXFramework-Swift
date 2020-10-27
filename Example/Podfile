@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'NXFramework-Swift_Example' do
+  pod 'NXFramework-Swift', :path => '../'
+
+end
