@@ -50,7 +50,7 @@ pod "NXFramework-Swift" ,:git => 'https://github.com/jsonwang/NXFramework-Swift.
 ```
 ## Author
 
-LM， WWW， 袁涛， AK
+LM， WWW， Codeer_YT， AK
 
 ## License
 
