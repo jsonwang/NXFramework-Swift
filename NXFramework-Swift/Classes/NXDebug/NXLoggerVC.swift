@@ -26,6 +26,8 @@ class NXLoggerVC: UIViewController {
             loadWebView()
         }
     }
+    //日志文件本地地址
+    var logFilePath:URL?
 
     var webView: WKWebView = {
         
@@ -39,12 +41,7 @@ class NXLoggerVC: UIViewController {
         conf.userContentController = userContentController
         userContentController.addUserScript(script)
         let view = WKWebView(frame: CGRect.zero, configuration: conf)
-        
-        /*
-        view.scrollView.isScrollEnabled = true               // Make sure our view is interactable
-        view.scrollView.bounces = true                    // Things like this should be handled in web code
-        view.allowsBackForwardNavigationGestures = false   // Disable swiping to navigate
-         */
+   
         return view
     }()
     
@@ -60,7 +57,7 @@ class NXLoggerVC: UIViewController {
         button.backgroundColor = themeColor
         button.setTitleColor(.white, for: .normal)
         button.roundedCorners(cornerRadius: 5)
-        button.setTitle("Send email", for: .normal)
+        button.setTitle("分享日志", for: .normal)
         button.addTarget(self, action: #selector(btnSendPressed(_:)), for: .touchUpInside)
         
         return button
@@ -71,7 +68,7 @@ class NXLoggerVC: UIViewController {
         button.backgroundColor = themeColor
         button.setTitleColor(.white, for: .normal)
         button.roundedCorners(cornerRadius: 5)
-        button.setTitle("Remove All", for: .normal)
+        button.setTitle("清空日志", for: .normal)
         button.addTarget(self, action: #selector(btnRemovePressed(_:)), for: .touchUpInside)
         return button
     }()
@@ -80,7 +77,7 @@ class NXLoggerVC: UIViewController {
         button.backgroundColor = themeColor
         button.setTitleColor(.white, for: .normal)
         button.roundedCorners(cornerRadius: 5)
-        button.setTitle("Cancel", for: .normal)
+        button.setTitle("取消", for: .normal)
         button.addTarget(self, action: #selector(btnCancelPressed(_:)), for: .touchUpInside)
         return button
     }()
@@ -116,53 +113,22 @@ class NXLoggerVC: UIViewController {
     }
     
     @objc func btnSendPressed(_ button: UIButton) {
-        sendEmail()
+ 
+        let activityViewController = UIActivityViewController(activityItems: [logFilePath as Any] , applicationActivities: nil)
+
+        present(activityViewController,
+            animated: true,
+            completion: nil)
     }
     
     @objc func btnRemovePressed(_ button: UIButton) {
         delegate?.removeAll()
     }
-    
-    private func sendEmail() {
-        guard MFMailComposeViewController.canSendMail() == true else {
-            self.showAlert(withTitle: "No email client", message: "Please configure your email client first")
-            return
-        }
-
-        let mailComposer = MFMailComposeViewController()
-        mailComposer.mailComposeDelegate = self as! MFMailComposeViewControllerDelegate
-        
-        var body = "Host App: \(Bundle.main.bundleIdentifier ?? "")\n"
-        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
-            let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            body += "Host App Version: \(version).\(buildNumber)\n"
-        }
-        if let venderId = UIDevice.current.identifierForVendor {
-            body += "identifierForVendor: \(venderId)\n"
-        }
-
-        mailComposer.setSubject("Log of \(Bundle.main.bundleIdentifier ?? "")")
-        mailComposer.setMessageBody(body, isHTML: false)
-
-
-        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
-            if let string = html as? String, let data = string.data(using: String.Encoding.utf16) {
-                
-                mailComposer.addAttachmentData(data, mimeType: "html", fileName: "\(Bundle.main.bundleIdentifier ?? "log").html" )
-            } else {
-                NXLogger.shared.e("get data from webview failed")
-            }
-        }
-        /*
-        if let data = try? Data(html) {
-            mailComposer.addAttachmentData(data, mimeType: "text/txt", fileName: "SwiftyLog.txt")
-        }
-        */
-        self.present(mailComposer, animated: true, completion: nil)
-    }
-    
+  
     private func loadWebView() {
         webView.loadHTMLString(data, baseURL: nil)
+   
+ 
     }
 }
     

@@ -32,6 +32,7 @@ class LoggerManager: NSObject {
         guard topViewController .isKind(of: NXLoggerVC.self) == false else { return }
         
         controller.data = " \(loadLog())\(deviceInfo())"
+        controller.logFilePath =  NXLogger.shared.logUrl
         controller.delegate = self
         
         topViewController.present(controller, animated: true, completion: nil)

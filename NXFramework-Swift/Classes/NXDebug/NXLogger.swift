@@ -18,11 +18,11 @@ public enum NXLoggerLevel: Int {
     
     var name: String {
         switch self {
-            case .info: return "i"
-            case .debug: return "d"
-            case .warning: return "w"
-            case .error: return "e"
-            case .none: return "N"
+        case .info: return "i"
+        case .debug: return "d"
+        case .warning: return "w"
+        case .error: return "e"
+        case .none: return "N"
         }
     }
 }
@@ -40,7 +40,7 @@ private let fileExtension = "txt"
 private let LOG_BUFFER_SIZE = 10
 
 public class NXLogger: NSObject {
-
+    
     // MARK: - Output
     public var tag: String?
     public var level: NXLoggerLevel = .none
@@ -50,8 +50,8 @@ public class NXLogger: NSObject {
     // MARK: - Init
     private let isolationQueue = DispatchQueue(label: "com.nxframework.isolation", qos: .background, attributes: .concurrent)
     private let serialQueue = DispatchQueue(label: "com.nxframework.swiftylog")
-    private let logSubdiretory = NXFileManager.documentDirectoryURL.appendingPathComponent(fileExtension)
-
+    let logSubdiretory = NXFileManager.documentDirectoryURL.appendingPathComponent(fileExtension)
+    
     public static let shared = NXLogger()
     
     private var _data: [String] = []
@@ -60,7 +60,7 @@ public class NXLogger: NSObject {
         set { isolationQueue.async(flags: .barrier) { self._data = newValue } }
     }
     
-    private var logUrl: URL? {
+    var logUrl: URL? {
         let fileName = "NSFrameworkSwiftyLog"
         try? FileManager.default.createDirectory(at: logSubdiretory, withIntermediateDirectories: false)
         let url = logSubdiretory.appendingPathComponent(fileName).appendingPathExtension(fileExtension)
@@ -69,21 +69,22 @@ public class NXLogger: NSObject {
     
     private override init() {
         super.init()
-     
+        
         NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name:  UIApplication.willResignActiveNotification, object: nil)
-   
+        
+         
     }
     
     // MARK: - Methods
     @objc private func appMovedToBackground() {
-         self.saveAsync()
+        self.saveAsync()
     }
     
     func saveAsync() {
         guard let url = logUrl else { return }
         serialQueue.async { [weak self] in
             guard let count = self?.data.count, count > 0 else { return }
-
+            
             var stringsData = Data()
             
             self?.data.forEach { (string) in
@@ -93,7 +94,7 @@ public class NXLogger: NSObject {
                     print("MutalbeData failed")
                 }
             }
-
+            
             do {
                 try stringsData.append2File(fileURL: url)
                 self?.data.removeAll()
@@ -113,31 +114,31 @@ public class NXLogger: NSObject {
     func load() -> [String]? {
         guard let url = logUrl else { return nil }
         guard let strings = try? String(contentsOf: url, encoding: String.Encoding.utf8) else { return nil }
-
+        
         return strings.components(separatedBy: "\n")
     }
-
+    
     private func log(_ level: NXLoggerLevel, message: String, currentTime: Date, fileName: String , functionName: String, lineNumber: Int, thread: Thread) {
         
         guard level.rawValue >= self.level.rawValue else { return }
         
         
         let _fileName = fileName.split(separator: "/")
-        let text = "\(level.name)-\(showThread ? thread.description : "")[\(_fileName.last ?? "?")#\(functionName)#\(lineNumber)]\(tag ?? ""): \(message)"
+        let text = "\(level.name) - \(showThread ? thread.description : "")[\(_fileName.last ?? "?") \(functionName) Line:\(lineNumber)]\(tag ?? ""): \(message)"
         
         switch self.ouput {
-            case .fileOnly:
-                addToBuffer(text: "\(currentTime.iso8601) \(text)")
-            case .debuggerConsole:
-                print("\(currentTime.iso8601) \(text)")
-            case .deviceConsole:
-                NSLog(text)
-            case .debugerConsoleAndFile:
-                print("\(currentTime.iso8601) \(text)")
-                addToBuffer(text: "\(currentTime.iso8601) \(text)")
-            case .deviceConsoleAndFile:
-                NSLog(text)
-                addToBuffer(text: "\(currentTime.iso8601) \(text)")
+        case .fileOnly:
+            addToBuffer(text: "\(currentTime.iso8601) \(text)")
+        case .debuggerConsole:
+            print("\(currentTime.iso8601) \(text)")
+        case .deviceConsole:
+            NSLog(text)
+        case .debugerConsoleAndFile:
+            print("\(currentTime.iso8601) \(text)")
+            addToBuffer(text: "\(currentTime.iso8601) \(text)")
+        case .deviceConsoleAndFile:
+            NSLog(text)
+            addToBuffer(text: "\(currentTime.iso8601) \(text)")
         }
     }
     
