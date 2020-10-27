@@ -2,6 +2,7 @@
   "name": "NXFramework-Swift",
   "version": "0.1.0",
   "summary": "A short description of NXFramework-Swift.",
+  "swift_versions": "5.0",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jsonwang/NXFramework-Swift",
   "license": {
@@ -18,5 +19,6 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "NXFramework-Swift/Classes/**/*"
+  "source_files": "NXFramework-Swift/Classes/**/*",
+  "swift_version": "5.0"
 }

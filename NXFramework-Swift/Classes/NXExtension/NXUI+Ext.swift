@@ -236,7 +236,7 @@ extension UIView {
         effectView.frame = self.bounds
         self.backgroundColor = .clear
         self.addSubview(effectView)
-        self.sendSubview(toBack: effectView)
+        self.sendSubviewToBack(effectView)
     }
 }
 public extension UIView {

@@ -378,7 +378,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		43A34FF0854AA0296E531E9A5C777FF7 /* Release */ = {
+		217A014E887F86405CBF32670B45BAB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DF85CF8352F7B864F56B125AC31D2AB /* NXFramework-Swift.xcconfig */;
 			buildSettings = {
@@ -402,7 +402,38 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		287CCDF0640E4CF6AF098220EFEFB75C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DF85CF8352F7B864F56B125AC31D2AB /* NXFramework-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NXFramework-Swift/NXFramework-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NXFramework-Swift/NXFramework-Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NXFramework-Swift/NXFramework-Swift.modulemap";
+				PRODUCT_MODULE_NAME = NXFramework_Swift;
+				PRODUCT_NAME = NXFramework_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -476,37 +507,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		9B1036759E2EDD827EBAFF32B981A7A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DF85CF8352F7B864F56B125AC31D2AB /* NXFramework-Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NXFramework-Swift/NXFramework-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NXFramework-Swift/NXFramework-Swift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NXFramework-Swift/NXFramework-Swift.modulemap";
-				PRODUCT_MODULE_NAME = NXFramework_Swift;
-				PRODUCT_NAME = NXFramework_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -647,8 +647,8 @@
 		E89A4240651B66A274634A6A0F4D9F63 /* Build configuration list for PBXNativeTarget "NXFramework-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B1036759E2EDD827EBAFF32B981A7A4 /* Debug */,
-				43A34FF0854AA0296E531E9A5C777FF7 /* Release */,
+				217A014E887F86405CBF32670B45BAB5 /* Debug */,
+				287CCDF0640E4CF6AF098220EFEFB75C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -70,7 +70,7 @@ public class NXLogger: NSObject {
     private override init() {
         super.init()
      
-        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name:  NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name:  UIApplication.willResignActiveNotification, object: nil)
    
     }
     
