@@ -32,20 +32,20 @@ extension NSArray {
 extension NSArray {
     /// 添加元素
     /// - Parameter anObject: 被添加元素
-    func nx_safeAdding(anObject : Element) -> [Element] {
+    func nx_safeAdding(anObject : Element?) -> [Element] {
         guard let object = anObject else {
-            return self
+            return self as! [NSArray.Element]
         }
-        return adding(anObject)
+        return adding(object)
     }
     
     /// 拼接素组
     /// - Parameter otherArray: 被拼接的数组
-    func nx_safeAddingObjects(from otherArray: [Element]) -> [Element] {
+    func nx_safeAddingObjects(from otherArray: [Element]?) -> [Element] {
         guard let objects = otherArray else {
-            return self
+            return self as! [NSArray.Element]
         }
-        return addingObjects(from: otherArray)
+        return addingObjects(from: objects)
     }
 }
 

@@ -12,7 +12,7 @@ import Foundation
 extension NSMutableArray {
     /// 添加解包后的元素
     /// - Parameter anObject: 添加的元素
-    func nx_safeAdd(_ anObject: Any) -> Bool {
+    func nx_safeAdd(_ anObject: Any?) -> Bool {
         guard let object = anObject else {
             return false
         }
@@ -26,7 +26,7 @@ extension NSMutableArray {
     /// 插入解包后元素 成功true
     /// - Parameter anObject: 插入元素
     /// - Parameter index: 插入位置
-    func nx_safeInsert(_ anObject: Any, at index: Int) -> Bool {
+    func nx_safeInsert(_ anObject: Any?, at index: Int) -> Bool {
         guard let object = anObject else {
             return false
         }

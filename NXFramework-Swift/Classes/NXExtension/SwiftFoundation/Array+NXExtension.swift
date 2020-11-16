@@ -40,24 +40,14 @@ extension Array {
     /// - Parameter subrange: 被修改区间
     /// - Parameter newElements: 替换集合
     mutating func nx_safeReplaceSubrange<C>(_ subrange: Range<Int>, with newElements: C) -> Bool where Element == C.Element, C : Collection  {
-        if self.count <= subrange.startIndex {
+        let selfRange = nx_bounds()
+        if !selfRange.overlaps(subrange) || !(self.isEmpty && subrange.startIndex == 0) {
             return false
         }
         replaceSubrange(subrange, with: newElements)
         return true
     }
-    
-    /// 区间替换操作
-    /// - Parameter subrange: 替换区间
-    /// - Parameter newElements: 替换元素
-    mutating func nx_safeReplaceSubrange<C, R>(_ subrange: R, with newElements: C) -> Bool where C : Collection, R : RangeExpression, Self.Element == C.Element, Self.Index == R.Bound {
-        if self.count <= subrange.startIndex {
-            return false
-        }
-        replaceSubrange(subrange, with: newElements)
-        return true
-    }
-    
+        
 }
 
 // MARK:- 访问操作
@@ -96,5 +86,11 @@ extension Array {
         }
         remove(at: index)
         return true
+    }
+}
+
+extension Array {
+    mutating func nx_bounds() -> Range<Int> {
+        return Range(0...(self.count-1))
     }
 }
