@@ -20,18 +20,18 @@ extension Array {
         insert(newElement, at: i)
         return true
     }
-    
-    /// 插入指定位置
-    /// - Parameter newElements: 指定集合类型
-    /// - Parameter i: 指定位置
-    mutating func nx_safeInsert<C>(contentsOf newElements: C, at i: Int) -> Bool where C : Collection, Self.Element == C.Element {
-        if self.count <= i && !self.isEmpty && i != 0 {
-            return false
-        }
-        insert(contentsOf: newElements, at: i)
-        return true
-    }
-    
+    //mdf by ak 注释编译不过方法
+//    /// 插入指定位置
+//    /// - Parameter newElements: 指定集合类型
+//    /// - Parameter i: 指定位置
+//    mutating func nx_safeInsert<C>(contentsOf newElements: C, at i: Int) -> Bool where C : Collection, Array.Element == C.Element {
+//        if self.count <= i && !self.isEmpty && i != 0 {
+//            return false
+//        }
+//        insert(contentsOf: newElements, at: i)
+//        return true
+//    }
+//
 }
 
 // MARK:- 修改操作
