@@ -10,14 +10,7 @@ import UIKit
 
 extension UIWindow {
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        guard NXLogger.shared.level != .none else { return }
-        guard NXLogger.shared.ouput == .debugerConsoleAndFile
-            || NXLogger.shared.ouput == .deviceConsoleAndFile
-            || NXLogger.shared.ouput == .fileOnly else { return }
-        
-        NXLogger.shared.saveAsync()
-        let manager = LoggerManager()
-        manager.show()
+ 
     }
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		20532DA9553227FBE072D48F /* Pods_NXFramework_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67849417B859DE279298BCBB /* Pods_NXFramework_Swift_Example.framework */; };
+		41A9922B2566A229003960E7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9922A2566A229003960E7 /* HomeVC.swift */; };
+		41A9922D2566A237003960E7 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9922C2566A237003960E7 /* MineVC.swift */; };
+		41A9922F2566A440003960E7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9922E2566A440003960E7 /* TabBarController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		062A847E11CB22E0774146F1 /* Pods-NXFramework-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXFramework-Swift_Example.release.xcconfig"; path = "Target Support Files/Pods-NXFramework-Swift_Example/Pods-NXFramework-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		067154CD319EBFEDF792B7C5 /* Pods-NXFramework-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXFramework-Swift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-NXFramework-Swift_Tests/Pods-NXFramework-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		41A9922A2566A229003960E7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		41A9922C2566A237003960E7 /* MineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
+		41A9922E2566A440003960E7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		42FDCC471CD40D3814D1644F /* Pods-NXFramework-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXFramework-Swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-NXFramework-Swift_Tests/Pods-NXFramework-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		43E95B2F95A329347B4773ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NXFramework-Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NXFramework-Swift_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +91,9 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				41A9922A2566A229003960E7 /* HomeVC.swift */,
+				41A9922C2566A237003960E7 /* MineVC.swift */,
+				41A9922E2566A440003960E7 /* TabBarController.swift */,
 			);
 			name = "Example for NXFramework-Swift";
 			path = "NXFramework-Swift";
@@ -237,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A9922B2566A229003960E7 /* HomeVC.swift in Sources */,
+				41A9922D2566A237003960E7 /* MineVC.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				41A9922F2566A440003960E7 /* TabBarController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

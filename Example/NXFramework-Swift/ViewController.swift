@@ -13,14 +13,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-           
-            let logger = NXLogger.shared
-//            #if DEBUG
-                logger.level = .info
-                logger.ouput = .debugerConsoleAndFile
-//                #endif
-                logger.d("App Started....")
-        print("sadfasdfad")
+    
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    
+                        let logger = NXLogger.shared
+
+                            logger.level = .info
+                            logger.ouput = .debugerConsoleAndFile
+
+                            logger.d("App Started....")
+                    print("sadfasdfad")
+        }
+
     
     }
 
