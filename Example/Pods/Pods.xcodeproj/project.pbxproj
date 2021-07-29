@@ -21,6 +21,7 @@
 		8BD7817310E541EE338B291E2EA42641 /* NSMutableArray+NXExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF8AA6BB8DD88DD5D6EF36DA4DACB97 /* NSMutableArray+NXExtension.swift */; };
 		8E9F2EE1B625E541088C3B1462CFF10D /* NXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0894BA036C66E926E2EE767FDBDD533E /* NXFileManager.swift */; };
 		916A8E5478D265CCD889C9B845B1E17C /* NXFundation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F292AF3734527055C0D1ED2CC24D4D1 /* NXFundation+Ext.swift */; };
+		9F294FF826B29326000E585C /* UIAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F294FF726B29326000E585C /* UIAdapter.swift */; };
 		B0DD05F7993A23D727E242F9FD461E08 /* UIView+NXBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B8C6967D3B89D6C2F02108B95CC13 /* UIView+NXBadgeView.swift */; };
 		B4317E63B66FBDB04E877B33BBF4C293 /* NXUI+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4667F896327BAA7842D94A40E747D0 /* NXUI+Ext.swift */; };
 		B483C0BEBA5FF9B1D6D020A4345955C2 /* NXBadgeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6220AC7ED73A48683B9E0E26F47AA725 /* NXBadgeControl.swift */; };
@@ -49,31 +50,32 @@
 		144B8C6967D3B89D6C2F02108B95CC13 /* UIView+NXBadgeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+NXBadgeView.swift"; sourceTree = "<group>"; };
 		15CB0B2FC44F46C71F594A2A1C02253D /* DragButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DragButton.swift; sourceTree = "<group>"; };
 		1CF8AA6BB8DD88DD5D6EF36DA4DACB97 /* NSMutableArray+NXExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSMutableArray+NXExtension.swift"; sourceTree = "<group>"; };
-		27B1272452148D67981ED0D32D5C9302 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		27B1272452148D67981ED0D32D5C9302 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2CCC32E257B443B988786BADEBC0F7AD /* NXLoggerManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NXLoggerManager.swift; sourceTree = "<group>"; };
 		3062E21D0B0A4145231CA7984FFBF639 /* NXLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NXLogger.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		403745822CC7F3F3865A04CAFA5D8E3F /* NXDeviceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NXDeviceManager.swift; sourceTree = "<group>"; };
 		49F6EBA37B656C576284CAD61907ECC6 /* Pods-NXFramework-Swift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NXFramework-Swift_Example-umbrella.h"; sourceTree = "<group>"; };
 		5385FCDBF4C4CC28F5EDD63D06C3F3F5 /* UITabBarItem+NXBadgeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+NXBadgeView.swift"; sourceTree = "<group>"; };
-		562837E2BAD8D758968A596BEEF936CB /* NXFramework_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NXFramework_Swift.framework; path = "NXFramework-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		562837E2BAD8D758968A596BEEF936CB /* NXFramework_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NXFramework_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6220AC7ED73A48683B9E0E26F47AA725 /* NXBadgeControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NXBadgeControl.swift; sourceTree = "<group>"; };
 		6246B3A31E1317739DD8E31B74B9B04E /* Pods-NXFramework-Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NXFramework-Swift_Example.modulemap"; sourceTree = "<group>"; };
-		676335F014F3DB65DD1645B9B7E1AEC8 /* NXFramework-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "NXFramework-Swift.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		676335F014F3DB65DD1645B9B7E1AEC8 /* NXFramework-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "NXFramework-Swift.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7F58754E8E13F87C721DE5C92D7933E2 /* Pods-NXFramework-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NXFramework-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		81927F107292E9E09559B60790268FEE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		81927F107292E9E09559B60790268FEE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		821DDAD260EE0890CFA4F1006581BD1D /* NXFramework-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NXFramework-Swift.xcconfig"; sourceTree = "<group>"; };
 		831CB686753ABEDA0CCB101936B675D7 /* NXFramework-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "NXFramework-Swift.modulemap"; sourceTree = "<group>"; };
 		8E4AEA0BCF31A7E454B0D08F4C996832 /* NXLoggerVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NXLoggerVC.swift; sourceTree = "<group>"; };
 		9A84761D944168FC23A9769375864809 /* Pods-NXFramework-Swift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXFramework-Swift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F292AF3734527055C0D1ED2CC24D4D1 /* NXFundation+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NXFundation+Ext.swift"; sourceTree = "<group>"; };
+		9F294FF726B29326000E585C /* UIAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAdapter.swift; sourceTree = "<group>"; };
 		A53BC1275BD91F0C94F0BF5039C891E7 /* Pods-NXFramework-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NXFramework-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A751BA41F048C4CDE0B3590478453A69 /* Pods-NXFramework-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NXFramework-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1A8CE88E78FF5AA960866ED37B4102 /* Pods-NXFramework-Swift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXFramework-Swift_Example-Info.plist"; sourceTree = "<group>"; };
 		AC618AA57747BD87DF46A3C44F24A4D0 /* Array+NXExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+NXExtension.swift"; sourceTree = "<group>"; };
 		ADCDC8CB22171ED930C2F0FE8B95D857 /* NXConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NXConfig.swift; sourceTree = "<group>"; };
-		C26FA495F299239E6253869795F13191 /* Pods_NXFramework_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NXFramework_Swift_Example.framework; path = "Pods-NXFramework-Swift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26FA495F299239E6253869795F13191 /* Pods_NXFramework_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NXFramework_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BBE4F19A9663CF6682E8024C9303C4 /* NXUIColor+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NXUIColor+Ext.swift"; sourceTree = "<group>"; };
 		C4328212EB97281011EBA5239EFD81C0 /* NXFramework-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NXFramework-Swift-prefix.pch"; sourceTree = "<group>"; };
 		CAF283B5BF2F32CA3AA9135EF05D8ADD /* UIBarButtonItem+NXBadgeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+NXBadgeView.swift"; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 			children = (
 				AC618AA57747BD87DF46A3C44F24A4D0 /* Array+NXExtension.swift */,
 			);
-			name = SwiftFoundation;
 			path = SwiftFoundation;
 			sourceTree = "<group>";
 		};
@@ -154,13 +155,13 @@
 				D8067AC543F1C47C594646E9E465392A /* NSArray+NXExtension.swift */,
 				1CF8AA6BB8DD88DD5D6EF36DA4DACB97 /* NSMutableArray+NXExtension.swift */,
 			);
-			name = OCFoundation;
 			path = OCFoundation;
 			sourceTree = "<group>";
 		};
 		7C9DAA636BEB8BA4550AB721FD088722 /* NXUtility */ = {
 			isa = PBXGroup;
 			children = (
+				9F294FF626B29326000E585C /* UIAdapter */,
 				403745822CC7F3F3865A04CAFA5D8E3F /* NXDeviceManager.swift */,
 				0894BA036C66E926E2EE767FDBDD533E /* NXFileManager.swift */,
 				AF1593F72261CB2404D7C8CF0D24EB02 /* NXCustomViews */,
@@ -169,12 +170,19 @@
 			path = "NXFramework-Swift/Classes/NXUtility";
 			sourceTree = "<group>";
 		};
+		9F294FF626B29326000E585C /* UIAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9F294FF726B29326000E585C /* UIAdapter.swift */,
+			);
+			path = UIAdapter;
+			sourceTree = "<group>";
+		};
 		AF1593F72261CB2404D7C8CF0D24EB02 /* NXCustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				D95FF7B77F78C5607ACD8D54D3E4BD90 /* NXBadgeView */,
 			);
-			name = NXCustomViews;
 			path = NXCustomViews;
 			sourceTree = "<group>";
 		};
@@ -273,7 +281,6 @@
 				5385FCDBF4C4CC28F5EDD63D06C3F3F5 /* UITabBarItem+NXBadgeView.swift */,
 				144B8C6967D3B89D6C2F02108B95CC13 /* UIView+NXBadgeView.swift */,
 			);
-			name = NXBadgeView;
 			path = NXBadgeView;
 			sourceTree = "<group>";
 		};
@@ -417,6 +424,7 @@
 				75C286980EAA7F9420AE9DFC53FBDCBE /* NXConfig.swift in Sources */,
 				29D818BDC44C1E2DC320BB35061A0455 /* NXDeviceManager.swift in Sources */,
 				8E9F2EE1B625E541088C3B1462CFF10D /* NXFileManager.swift in Sources */,
+				9F294FF826B29326000E585C /* UIAdapter.swift in Sources */,
 				DBE173AD64F8EE42383B669D4309B902 /* NXFramework-Swift-dummy.m in Sources */,
 				916A8E5478D265CCD889C9B845B1E17C /* NXFundation+Ext.swift in Sources */,
 				4401D9716FE57F2ED125077F517453D1 /* NXLogger.swift in Sources */,
@@ -633,8 +641,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

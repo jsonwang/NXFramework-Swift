@@ -8,6 +8,7 @@
 
 
 import UIKit
+import NXFramework_Swift
 
 class HomeVC: UIViewController {
     
@@ -46,6 +47,15 @@ class HomeVC: UIViewController {
         self.navigationItem.rightBarButtonItem?.nx.addBadge(number: 5000000)
         self.navigationItem.rightBarButtonItem?.nx.moveBadge(x: -5, y: 0)
         self.navigationItem.rightBarButtonItem?.nx.setBadge(flexMode: .head)
+        
+        
+        UIAdapter.standardMode = .i_6s
+        
+        
+        let v =  UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100).adpaptValue)
+        v.backgroundColor = UIColor.red
+        self.view.addSubview(v)
+        
     }
     
 //    func setupViews() {
